@@ -56,9 +56,8 @@ class XdripSourcePlugin @Inject constructor(
 
     @VisibleForTesting
     fun detectSource(glucoseValue: GV) {
-        advancedFiltering = arrayOf(
-            SourceSensor.MEDTRONIC,
-     ).any{ it==glucoseValue.sourceSensor       
+        advancedFiltering = true
+            
     }
 
     // cannot be inner class because of needed injection
